@@ -1,0 +1,189 @@
+#page {
+    margin: 40px 20px;
+}
+
+p {
+    color: #FFFFFF;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+span.web-developer span.web {
+    color: #4CAF50;
+}
+
+span.web-developer span.developer {
+    color: #EC407A;
+}
+
+span.web-developer {
+    background-color: #212121;
+    padding: 2px 5px;
+    font-family: monospace;
+    display: block;
+}
+
+#timeline {
+    background: #fff;
+    background: linear-gradient(180deg, transparent, #FFF, transparent);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-size: 5px 1px;
+}
+
+.element {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.element:first-child {
+    padding-top: 0px;
+}
+
+.year {
+    font-size: 1.2em;
+    display: table;
+    margin: 20px auto 0px;
+    background-color: #333;
+    padding: 5px 10px;
+}
+
+.text {
+    display: block;
+    margin: 10px auto;
+    background-color: #333;
+    padding: 5px 10px;
+}
+
+.element.palermo .text {
+    background-image: url('/assets/images/palermo.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.batman .text {
+    background-image: url('/assets/images/batman-logo.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.element.amiga .text {
+    background-image: url('/assets/images/amiga.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.slow-internet .text {
+    background-image: url('/assets/images/56k.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.html .text {
+    background-image: url('/assets/images/html.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.graduate .text {
+    background-image: url('/assets/images/graduate.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.work-qwince .text {
+    background-image: url('/assets/images/webdeveloper.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.work-pter .text {
+    background-image: url('/assets/images/workstation-pter.jpg');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.work-myfamilyplace .text {
+    background-image: url('/assets/images/workstation-myfamilyplace.jpg');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.work-everli .text {
+    background-image: url('/assets/images/workstation-everli.jpg');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element.university .text {
+    background-image: url('/assets/images/university-palermo.png');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.element:last-child {
+    padding-bottom: 0px;
+}
+
+span.code {
+    background-color: #212121;
+    padding: 2px 5px;
+    font-family: monospace;
+    display: table;
+    margin: 0 auto;
+}
+
+span.code span.html-code {
+    color: #4CAF50;
+}
+
+span.code span.css-code {
+    color: #EC407A;
+}
+
+strong.batman-returns {
+    padding: 2px 5px;
+    display: table;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+strong.batman-returns span.batman-text {
+    margin: 0px auto;
+    font-size: 1.4em;
+}
+
+strong.batman-returns span.returns-text {
+    margin: 0px auto;
+    font-size: 0.8em;
+}
+
+@media(min-width: 1024px) {
+    .element {
+        width: 50%;
+        margin: 0 25%;
+    }
+}

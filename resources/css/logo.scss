@@ -1,0 +1,27 @@
+#logo-container {
+    display: block;
+    position: fixed;
+    background-color: #212121;
+    height: 50px;
+    top: 20px;
+    left: 70px;
+    z-index: 9999;
+}
+
+#logo {
+    font-family: 'Aldrich', sans-serif;
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 6.5px 15px;
+    padding: 0;
+    user-select: none;
+}
+
+#logo span {
+    color: #a53232;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
