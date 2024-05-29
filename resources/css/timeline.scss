@@ -1,0 +1,19 @@
+#timeline {
+    background: #fff;
+    background: linear-gradient(180deg, transparent, #FFF, transparent);
+    background-position: 50%;
+    background-repeat: repeat-y;
+    background-size: 5px 1px;
+}
+
+.date {
+    background-color: #333;
+    padding: 5px 10px;
+}
+
+.element .content {
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

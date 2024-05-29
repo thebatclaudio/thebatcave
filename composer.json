@@ -7,19 +7,14 @@
     "framework"
   ],
   "license": "MIT",
-  "repositories": [
-    {
-      "type": "path",
-      "url": "../laravel-eloquent-markdown"
-    }
-  ],
   "require": {
     "php": "^8.3",
     "laravel/framework": "^11.0",
     "laravel/tinker": "^2.9",
+    "league/flysystem-aws-s3-v3": "^3.0",
     "livewire/livewire": "^3.4",
     "spatie/yaml-front-matter": "^2.0",
-    "thebatclaudio/laravel-eloquent-markdown": "@dev"
+    "thebatclaudio/eloquent-markdown": "^1.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
@@ -74,6 +69,6 @@
       "php-http/discovery": true
     }
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true
 }

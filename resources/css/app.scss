@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/icons";
+
 @import 'common';
 @import 'logo';
 @import 'particles';
 @import 'menu';
-//
-//@import 'homepage';
-//@import 'about';
+@import 'homepage';
+@import 'timeline';
+@import 'about';

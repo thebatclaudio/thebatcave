@@ -1,7 +1,11 @@
-<div x-data="{ menuOpened: false }">
+<div x-data="{ menuOpened: false }" class="sticky top-0 z-50">
     <a id="menu-button" :class="{'opened': menuOpened }" @click="menuOpened = !menuOpened;">
         <i class="fa-solid fa-bars"></i>
     </a>
+
+    <div id="logo-container">
+        <h1 id="logo">the<span>bat</span>claud.<span>io</span></h1>
+    </div>
 
     <nav class="menu-wrapper" :class="{'opened': menuOpened }">
         <div class="icon-list">
@@ -21,7 +25,6 @@
             </ul>
 
             <ul class="social-links-ul">
-                <!--li><a href="https://blog.thebatclaud.io" title="Blog" target="_blank" class="social-link"><i class="fas fa-rss-square"></i></a></li-->
                 <li>
                     <a href="https://www.linkedin.com/in/claudio-la-barbera/" title="Claudio La Barbera on LinkedIn" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
                 </li>
@@ -37,8 +40,6 @@
                 <li>
                     <a href="https://www.instagram.com/thebatclaudio" title="Claudio La Barbera on Instagram" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                 </li>
-
-
             </ul>
 
             <div class="contact-me">

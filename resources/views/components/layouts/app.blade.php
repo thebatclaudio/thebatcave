@@ -4,24 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $title ?? 'thebatclaud.io - claudio la barbera' }}</title>
+    <title>@yield('title', config('metadata.title'))</title>
 
-    <script src="{{ asset('assets/particles.min.js') }}"></script>
+    <script src="{{ asset('build/public/particles/particles.min.js') }}"></script>
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 
     <script data-navigate-once>
-        particlesJS.load('particles-js', '/assets/particles.json');
+        particlesJS.load('particles-js', '/build/public/particles/particles.json');
     </script>
 </head>
 <body>
 
 <livewire:menu></livewire:menu>
 
-<div id="logo-container">
-    <h1 id="logo">the<span>bat</span>claud.<span>io</span></h1>
-</div>
-
-<div class="content">
+<div class="container mx-auto">
 {{ $slot }}
 </div>
 

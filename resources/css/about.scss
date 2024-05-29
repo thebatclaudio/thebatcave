@@ -1,14 +1,3 @@
-#page {
-    margin: 40px 20px;
-}
-
-p {
-    color: #FFFFFF;
-    font-family: 'Aldrich', sans-serif;
-    font-size: 1.4em;
-    text-align: center;
-}
-
 span.web-developer span.web {
     color: #4CAF50;
 }
@@ -24,120 +13,87 @@ span.web-developer {
     display: block;
 }
 
-#timeline {
-    background: #fff;
-    background: linear-gradient(180deg, transparent, #FFF, transparent);
-    background-position: 50%;
-    background-repeat: repeat-y;
-    background-size: 5px 1px;
-}
-
-.element {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.element:first-child {
-    padding-top: 0px;
-}
-
-.year {
-    font-size: 1.2em;
-    display: table;
-    margin: 20px auto 0px;
-    background-color: #333;
-    padding: 5px 10px;
-}
-
-.text {
-    display: block;
-    margin: 10px auto;
-    background-color: #333;
-    padding: 5px 10px;
-}
-
-.element.palermo .text {
-    background-image: url('/assets/images/palermo.png');
+.palermo .content {
+    background-image: url('/resources/assets/images/palermo.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.batman .text {
-    background-image: url('/assets/images/batman-logo.png');
+.batman .content {
+    background-image: url('/resources/assets/images/batman-logo.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.element.amiga .text {
-    background-image: url('/assets/images/amiga.png');
-    padding: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.element.slow-internet .text {
-    background-image: url('/assets/images/56k.png');
+.amiga .content {
+    background-image: url('/resources/assets/images/amiga.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.html .text {
-    background-image: url('/assets/images/html.png');
+.slow-internet .content {
+    background-image: url('/resources/assets/images/56k.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.graduate .text {
-    background-image: url('/assets/images/graduate.png');
+.html .content {
+    background-image: url('/resources/assets/images/html.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.work-qwince .text {
-    background-image: url('/assets/images/webdeveloper.png');
+.graduate .content {
+    background-image: url('/resources/assets/images/graduate.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.work-pter .text {
-    background-image: url('/assets/images/workstation-pter.jpg');
+.work-qwince .content {
+    background-image: url('/resources/assets/images/webdeveloper.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.work-myfamilyplace .text {
-    background-image: url('/assets/images/workstation-myfamilyplace.jpg');
+.work-pter .content {
+    background-image: url('/resources/assets/images/workstation-pter.jpg');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.work-everli .text {
-    background-image: url('/assets/images/workstation-everli.jpg');
+.work-myfamilyplace .content {
+    background-image: url('/resources/assets/images/workstation-myfamilyplace.jpg');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.element.university .text {
-    background-image: url('/assets/images/university-palermo.png');
+.work-everli .content {
+    background-image: url('/resources/assets/images/workstation-everli.jpg');
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.university .content {
+    background-image: url('/resources/assets/images/university-palermo.png');
     padding: 40px;
     background-position: center;
     background-repeat: no-repeat;

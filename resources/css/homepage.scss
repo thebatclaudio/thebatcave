@@ -1,54 +1,7 @@
-#page {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: none;
-}
-
 #title, #subtitle {
-    text-align: center;
-    color: #FFFFFF;
     font-family: 'Anton', sans-serif;
 }
 
 #title {
-    text-transform: uppercase;
-    margin: 0;
-    white-space: nowrap;
-    font-size: 2em;
     letter-spacing: -0.03em;
-}
-
-#subtitle {
-    text-transform: lowercase;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    font-size: 1.4em;
-}
-
-@media only screen and (min-width: 375px) {
-    #title { font-size: 2.6em}
-    #subtitle { font-size: 2em}
-}
-
-@media only screen and (min-width: 425px) {
-    #title { font-size: 3em}
-    #subtitle { font-size: 2.2em}
-}
-
-@media only screen and (min-width: 768px) {
-    #title { font-size: 5em}
-    #subtitle { font-size: 3em}
-}
-
-@media only screen and (min-width: 1024px) {
-    #title { font-size: 6em}
-    #subtitle { font-size: 3.6em}
-}
-
-@media only screen and (min-width: 1440px) {
-    #title { font-size: 9em}
-    #subtitle { font-size: 4em}
 }
