@@ -1,4 +1,4 @@
-<div id="timeline" class="text-center text-white font-mono">
+<div id="timeline" class="text-center text-white font-mono animate-fade-delay">
     @foreach($this->posts as $post)
         <div class="mx-auto mt-32 palermo">
             <div class="date text-sm mx-auto table lowercase">{{ $post->date->format('d M Y') }}</div>

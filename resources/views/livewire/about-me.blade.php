@@ -1,4 +1,4 @@
-<div id="timeline" class="text-center text-white font-mono">
+<div id="timeline" class="text-center text-white font-mono animate-fade-delay">
     <div class="mx-auto mt-32 palermo">
         <div class="date text-sm mx-auto table lowercase">April 1993</div>
         <div class="content h-40 grid place-items-center relative mx-auto text-lg w-9/12 bg-zinc-800 bg-gradient-to-t from-zinc-900 from-40% py-10 mt-6 mb-10 rounded-sm">
