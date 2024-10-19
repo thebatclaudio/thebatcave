@@ -15,7 +15,9 @@
 </head>
 <body>
 
+@persist('menu')
 <livewire:menu></livewire:menu>
+@endpersist
 
 <div class="container mx-auto">
 {{ $slot }}

@@ -1,5 +1,5 @@
-<div x-data="{ menuOpened: false }" class="sticky top-0 z-50">
-    <a id="menu-button" :class="{'opened': menuOpened }" @click="menuOpened = !menuOpened;">
+<div class="sticky top-0 z-50">
+    <a id="menu-button" :class="{'opened' : $wire.opened}" wire:click="toggleMenu">
         <i class="fa-solid fa-bars"></i>
     </a>
 
@@ -7,38 +7,45 @@
         <h1 id="logo">the<span>bat</span>claud.<span>io</span></h1>
     </div>
 
-    <nav class="menu-wrapper" :class="{'opened': menuOpened }">
+    <nav class="menu-wrapper" :class="{'opened' : $wire.opened}">
         <div class="icon-list">
             <ul class="menu-ul">
                 <li>
-                    <a href="/" @click="menuOpened = !menuOpened;" class="link" wire:navigate><span data-letters="HOME">Home</span></a>
+                    <a href="/" class="link" wire:navigate><span data-letters="HOME">Home</span></a>
                 </li>
                 <li>
-                    <a href="/about-me" @click="menuOpened = !menuOpened;" class="link" wire:navigate><span data-letters="ABOUT ME">About Me</span></a>
+                    <a href="/about-me" class="link" wire:navigate><span data-letters="ABOUT ME">About Me</span></a>
                 </li>
                 <li>
-                    <a href="/blog" class="blog link" title="thebatclaudio's blog" target="blank" wire:navigate><span data-letters="BLOG">Blog</span></a>
+                    <a href="/blog" class="blog link" title="thebatclaudio's blog" target="blank" wire:navigate><span
+                            data-letters="BLOG">Blog</span></a>
                 </li>
                 <li>
-                    <a href="//cv.thebatclaud.io" class="blog link" title="thebatclaudio's CV" target="blank"><span data-letters="CV">CV</span></a>
+                    <a href="//cv.thebatclaud.io" class="blog link" title="thebatclaudio's CV" target="blank"><span
+                            data-letters="CV">CV</span></a>
                 </li>
             </ul>
 
             <ul class="social-links-ul">
                 <li>
-                    <a href="https://www.linkedin.com/in/claudio-la-barbera/" title="Claudio La Barbera on LinkedIn" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/claudio-la-barbera/" title="Claudio La Barbera on LinkedIn"
+                       target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.github.com/thebatclaudio" title="Claudio La Barbera on GitHub" target="_blank" class="social-link"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.github.com/thebatclaudio" title="Claudio La Barbera on GitHub" target="_blank"
+                       class="social-link"><i class="fab fa-github-square"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.twitter.com/thebatclaudio" title="Claudio La Barbera on Twitter" target="_blank" class="social-link"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.twitter.com/thebatclaudio" title="Claudio La Barbera on Twitter"
+                       target="_blank" class="social-link"><i class="fab fa-twitter-square"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/thebatclaudio" title="Claudio La Barbera on Facebook" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/thebatclaudio" title="Claudio La Barbera on Facebook"
+                       target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/thebatclaudio" title="Claudio La Barbera on Instagram" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/thebatclaudio" title="Claudio La Barbera on Instagram"
+                       target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
                 </li>
             </ul>
 
@@ -50,3 +57,13 @@
         </div>
     </nav>
 </div>
+
+@script
+<script>
+    document.addEventListener('livewire:navigated', () => {
+        if ($wire.opened) {
+            $wire.toggleMenu();
+        }
+    })
+</script>
+@endscript
