@@ -11,7 +11,7 @@ class Menu extends Component
 
     public function toggleMenu(): void
     {
-        $this->opened = !$this->opened;
+        $this->opened = ! $this->opened;
     }
 
     public function render(): View
