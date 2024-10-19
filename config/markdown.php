@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'disk' => 'markdown',
+    'disk' => 'posts',
 
     'block_renderers' => [
         ['class' => Heading::class, 'renderer' => AnchorHeadingRenderer::class, 'priority' => 10],
