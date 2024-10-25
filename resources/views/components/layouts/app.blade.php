@@ -19,7 +19,7 @@
 <livewire:menu></livewire:menu>
 @endpersist
 
-<div class="container mx-auto">
+<div class="mx-auto">
 {{ $slot }}
 </div>
 

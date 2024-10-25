@@ -3,9 +3,11 @@
         <i class="fa-solid fa-bars"></i>
     </a>
 
-    <div id="logo-container">
-        <h1 id="logo">the<span>bat</span>claud.<span>io</span></h1>
-    </div>
+    <a href="/">
+        <div id="logo-container">
+            <h1 id="logo">the<span>bat</span>claud.<span>io</span></h1>
+        </div>
+    </a>
 
     <nav class="menu-wrapper" :class="{'opened' : $wire.opened}">
         <div class="icon-list">
