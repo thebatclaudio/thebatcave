@@ -6,6 +6,8 @@
 
     <title>@yield('title', config('metadata.title'))</title>
 
+    @yield('metatags')
+
     <script src="{{ asset('build/public/particles/particles.min.js') }}"></script>
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
 

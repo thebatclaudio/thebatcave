@@ -36,4 +36,9 @@ class MarkdownPost extends MarkdownModel
             'day' => $this->date->format('d'),
         ]);
     }
+
+    public function imageUrl(): string
+    {
+        return url("/storage/post_images/$this->image");
+    }
 }

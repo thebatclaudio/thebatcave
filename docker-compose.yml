@@ -1,6 +1,9 @@
 networks:
   bat-network:
     driver: bridge
+  nginx-proxy:
+    external:
+      name: nginx-proxy
 
 services:
   app:
@@ -23,13 +26,17 @@ services:
     image: nginx:alpine
     container_name: batcave-nginx
     restart: unless-stopped
-    ports:
-      - "93:80"
+    expose:
+      - 80
     volumes:
       - ./:/var/www
       - ./docker-compose/nginx:/etc/nginx/conf.d/
+    environment:
+      VIRTUAL_HOST: thebatclaud.io
+      LETSENCRYPT_HOST: thebatclaud.io
     networks:
       - bat-network
+      - nginx-proxy
 
   db:
     image: mariadb
