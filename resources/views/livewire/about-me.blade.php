@@ -55,8 +55,8 @@
             Started to work as <span class="code text-sm bg-neutral-800 p-1 font-black"><span class="text-blue-500">Senior</span>_<span class="text-orange-400">Backend</span>_<span class="html-code">Engineer</span></span> at Everli
         </div>
     </div>
-    <div class="mx-auto mt-32 work-everli">
-        <div class="date text-sm mx-auto table lowercase">June 2023</div>
+    <div class="mx-auto mt-32 work-miaburton">
+        <div class="date text-sm mx-auto table lowercase">October 2024</div>
         <div class="content relative mx-auto text-lg w-10/12 bg-zinc-800 bg-gradient-to-t from-zinc-900 from-40% py-8 mt-6 mb-10 rounded-sm">
             Started to work as <span class="code text-sm bg-neutral-800 p-1 font-black"><span class="text-blue-500">Senior</span>_<span class="text-yellow-400">Frontend</span>_<span class="html-code">Developer</span></span> at Mia Burton
         </div>
