@@ -2,52 +2,40 @@ networks:
   bat-network:
     driver: bridge
   nginx-proxy:
-    external:
-      name: nginx-proxy
+    external: true
+
+volumes:
+  app:
 
 services:
   app:
     build:
-      args:
-        user: sammy
-        uid: 1000
-      context: ./
+      context: .
       dockerfile: ./docker-compose/app/Dockerfile
-    image: batcave
+    image: batcave-prod
     container_name: batcave-app
-    restart: unless-stopped
-    working_dir: /var/www/
+    working_dir: /var/www
     volumes:
-      - ./:/var/www
+      - app:/var/www
+    restart: always
+    environment:
+      APP_ENV: production
     networks:
       - bat-network
 
   nginx:
     image: nginx:alpine
     container_name: batcave-nginx
-    restart: unless-stopped
+    restart: always
     expose:
       - 80
     volumes:
-      - ./:/var/www
-      - ./docker-compose/nginx:/etc/nginx/conf.d/
+      - app:/var/www:ro
+      - ./docker-compose/nginx:/etc/nginx/conf.d
     environment:
       VIRTUAL_HOST: thebatclaud.io
       LETSENCRYPT_HOST: thebatclaud.io
+      LETSENCRYPT_EMAIL: hello@thebatclaud.io
     networks:
       - bat-network
       - nginx-proxy
-
-  db:
-    image: mariadb
-    container_name: batcave-db
-    volumes:
-      - ./db_data:/var/lib/mysql
-    environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_DATABASE=batcave
-      - MYSQL_USER=thebatclaudio
-      - MYSQL_PASSWORD=thebatclaudio
-    restart: always
-    networks:
-      - bat-network
