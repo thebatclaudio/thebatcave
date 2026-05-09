@@ -1,4 +1,8 @@
 <div class="sticky top-0 z-50">
+    <a id="back-button" href="/blog" wire:navigate style="display: none;">
+        <i class="fa-solid fa-chevron-left"></i>
+    </a>
+
     <a id="menu-button" :class="{'opened' : $wire.opened}" wire:click="toggleMenu">
         <i class="fa-solid fa-bars"></i>
     </a>
@@ -60,12 +64,27 @@
     </nav>
 </div>
 
+<script data-navigate-once>
+    (function() {
+        function toggle() {
+            const btn = document.getElementById('back-button');
+            const menuBtn = document.getElementById('menu-button');
+            if (!btn || !menuBtn) return;
+            const isArticle = window.location.pathname.startsWith('/blog/');
+            btn.style.display = isArticle ? 'block' : 'none';
+            menuBtn.classList.toggle('with-back', isArticle);
+        }
+        toggle();
+        document.addEventListener('livewire:navigated', toggle);
+    })();
+</script>
+
 @script
 <script>
     document.addEventListener('livewire:navigated', () => {
         if ($wire.opened) {
             $wire.toggleMenu();
         }
-    })
+    });
 </script>
 @endscript
