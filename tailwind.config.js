@@ -13,6 +13,7 @@ export default {
         extend: {
             animation: {
                 'fade-delay': 'fadeInDelay 1.3s ease-in-out',
+                'blink': 'blink 1s step-end infinite',
             },
 
             keyframes: {
@@ -20,6 +21,10 @@ export default {
                     '0%': {opacity: 0},
                     '70%': {opacity: 0},
                     '100%': {opacity: 1},
+                },
+                blink: {
+                    '0%, 100%': {opacity: 1},
+                    '50%': {opacity: 0},
                 },
             },
         },
