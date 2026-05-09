@@ -18,6 +18,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-db_data
 __pycache__/
 *.pyc
