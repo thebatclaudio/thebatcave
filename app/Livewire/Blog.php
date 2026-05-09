@@ -27,7 +27,7 @@ class Blog extends Component
 
     public function __construct()
     {
-        $this->allPosts = MarkdownPost::all();
+        $this->allPosts = MarkdownPost::all()->sortByDesc('date')->values();
     }
 
     public function render(): View
