@@ -35,7 +35,15 @@
         </div>
     </div>
 
-    <div class="relative w-full mx-auto z-1 py-6 px-10 2xl:w-9/12">
+    {{-- Clickable scroll-down indicator --}}
+    <div class="flex justify-center -mt-14 relative z-10">
+        <a href="#article-content"
+           class="inline-flex items-center justify-center w-10 h-10 text-white/60 hover:text-white transition-colors duration-300">
+            <i class="fas fa-chevron-down text-2xl animate-bounce-down"></i>
+        </a>
+    </div>
+
+    <div id="article-content" class="relative w-full mx-auto z-1 py-6 px-10 2xl:w-9/12">
         <div class="content text-white text-2xl subpixel-antialiased">
             <p>{!! $post->toHtml() !!}</p>
         </div>

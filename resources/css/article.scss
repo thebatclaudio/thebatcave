@@ -1,3 +1,7 @@
 .blog-article-header {
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0 80%, rgba(0,0,0,0));
 }
+
+#article-content {
+    scroll-margin-top: 80px;
+}

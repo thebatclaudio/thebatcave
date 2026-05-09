@@ -14,6 +14,7 @@ export default {
             animation: {
                 'fade-delay': 'fadeInDelay 1.3s ease-in-out',
                 'blink': 'blink 1s step-end infinite',
+                'bounce-down': 'bounceDown 2s ease-in-out infinite',
             },
 
             keyframes: {
@@ -25,6 +26,10 @@ export default {
                 blink: {
                     '0%, 100%': {opacity: 1},
                     '50%': {opacity: 0},
+                },
+                bounceDown: {
+                    '0%, 100%': {transform: 'translateY(0)', opacity: '0.6'},
+                    '50%': {transform: 'translateY(8px)', opacity: '1'},
                 },
             },
         },
