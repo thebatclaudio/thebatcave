@@ -1,6 +1,6 @@
 ---
 title: "How I built an AI command center to run my life (and my code)"
-description: "What started as sharing OpenCode configs on Slack with my team at Airalo turned into a full personal AI command center — 65 files, 5,921 lines, 26 commits, built in around 1 hour with AI. Here's how."
+description: "A single GitHub repo that defines, documents, and deploys every AI agent, command, and skill I use. No more scattered configs. Everything in one place."
 image: "2026-05-09-how-i-built-an-ai-command-center-to-run-my-life-and-my-code.png"
 ---
 
