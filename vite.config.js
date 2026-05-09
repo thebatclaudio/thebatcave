@@ -21,6 +21,14 @@ export default defineConfig({
             ]
         })
     ],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler',
+                silenceDeprecations: ['import', 'if-function', 'global-builtin'],
+            },
+        },
+    },
     resolve: {
         alias: {
             '~/fontawesome': path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free'),

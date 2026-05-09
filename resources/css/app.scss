@@ -1,18 +1,17 @@
+@use '@fortawesome/fontawesome-free/scss/fontawesome' as fa with (
+    $fa-font-path: '../webfonts'
+);
+@use '@fortawesome/fontawesome-free/scss/solid';
+
+@use 'common';
+@use 'logo';
+@use 'particles';
+@use 'menu';
+@use 'homepage';
+@use 'timeline';
+@use 'about';
+@use 'article';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-
-@import "@fortawesome/fontawesome-free/scss/fontawesome";
-@import "@fortawesome/fontawesome-free/scss/solid";
-@import "@fortawesome/fontawesome-free/scss/icons";
-
-@import 'common';
-@import 'logo';
-@import 'particles';
-@import 'menu';
-@import 'homepage';
-@import 'timeline';
-@import 'about';
-@import 'article';
