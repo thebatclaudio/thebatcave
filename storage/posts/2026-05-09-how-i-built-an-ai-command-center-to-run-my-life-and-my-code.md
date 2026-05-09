@@ -1,14 +1,18 @@
 ---
 title: "How I built an AI command center to run my life (and my code)"
-description: "I got tired of repeating myself to every AI agent I worked with. So I built a centralized command center for my entire AI ecosystem — 65 files, 5,921 lines, 26 commits, built in 48 hours. Here's how."
+description: "What started as sharing OpenCode configs on Slack with my team at Airalo turned into a full personal AI command center — 65 files, 5,921 lines, 26 commits, built in around 1 hour with AI. Here's how."
 image: "2026-05-09-how-i-built-an-ai-command-center-to-run-my-life-and-my-code.png"
 ---
 
-You know what's been bugging me? Every time I started a new project, I had to re-teach my AI tools who I am. My preferences. My conventions. The way I like things done. Every. Single. Time.
+The idea was born while working with my team at **Airalo**. We were sharing different global MCP configurations, an `AGENTS.md`, skills, and all sorts of OpenCode setup files — passing them around on Slack, copy-pasting, hoping nobody missed the latest update. It worked, but it was messy.
 
-I got tired of it. So I did what any sane person would do: I built a **centralized AI command center** for my entire machine.
+So, being a developer, I thought: *why not put this in a GitHub repo?* Version-controlled, documented, one source of truth. That was the spark.
+
+The team setup worked great — so great that I decided to do the same for myself with my personal things. Budgeting, journaling, meal planning, learning — all the stuff I manage outside of work. If a shared repo worked for a team, why wouldn't it work for *me* and all my different AI agents?
 
 Here's the story of how **ai-config** was born.
+
+I'll be honest: I didn't hand-roll every line of this. I built the entire system using [OpenCode](https://github.com/opencode-ai) with **Claude Opus 4.7** — the AI handled the scaffolding, the prompts, the documentation, and the orchestration. What you're reading is the result of about an hour of guided AI work, not a sleepless weekend of manual typing. And yes — this very article was written by the **Blog-Writer agent**, one of the agents I created for my Laravel blog project using the `/onboard` command right here in `ai-config`. All the code is on GitHub at [github.com/thebatclaudio/ai-config](https://github.com/thebatclaudio/ai-config).
 
 ## The problem: 17 agents, 14 commands, 7 skills, 6 servers — zero coordination
 
@@ -30,11 +34,11 @@ Here's what I needed:
 - **MCP servers** — Model Context Protocol servers for filesystem access, git operations, web fetching, memory, time, and multi-step reasoning
 - **Zero friction** — one command to bootstrap everything
 
-## The build: 48 hours of pure focus
+## The build: ~1 hour with AI
 
-I sat down on May 8th and didn't stop until it was done. Here's how it went down.
+I sat down on May 8th with OpenCode and Claude Opus 4.7 and let the AI do the heavy lifting. Here's how it went down.
 
-### Hour 0: The scaffold
+### Step 1: The scaffold
 
 Two commits. Folders, `.gitignore`, `.env` template. The foundation.
 
@@ -48,7 +52,7 @@ mcp/          → 6 Model Context Protocol server configs
 .opencode/    → 3 meta agents, 3 meta commands, 2 meta skills (local only)
 ```
 
-### Hour 2: The registry
+### Step 2: The registry
 
 `AGENTS.md`. **298 lines** of pure operating manual. Every agent, every command, every skill, every server — registered, documented, cross-referenced. It's not just a config file; it's the **constitution** of my AI ecosystem.
 
@@ -62,7 +66,7 @@ Each entry follows a strict template:
 
 No ambiguity. Every agent knows its job.
 
-### Hour 6: The bootstrap script
+### Step 3: The bootstrap script
 
 **`setup.py`** — 764 lines of cross-platform Python. This is the heart of the operation. It:
 
@@ -73,11 +77,11 @@ No ambiguity. Every agent knows its job.
 
 I added dry-run mode. Force mode. Uninstall mode. Windows junction fallback. Because I don't do half-measures.
 
-### Hour 12: MCP servers
+### Step 4: MCP servers
 
 Six servers. All running via `npx`. Filesystem, git, fetch, memory, sequential-thinking, time. Each one opens up a new superpower for my agents. The memory server alone is a game-changer — my agents can now remember context across sessions.
 
-### Hour 18: The skills
+### Step 5: The skills
 
 Seven Python utilities, each laser-focused:
 
@@ -91,7 +95,7 @@ Seven Python utilities, each laser-focused:
 
 These aren't just scripts. They're **weapons** my agents can deploy at will.
 
-### Hour 24: The agents
+### Step 6: The agents
 
 Ten **PERSONAL** agents for life management:
 
@@ -103,15 +107,15 @@ Code review, git history, documentation writing, debugging, refactoring, depende
 
 Each one with a meticulously crafted prompt, workflow, and guardrails.
 
-### Hour 36: Commands and polish
+### Step 7: Commands and polish
 
 Fourteen slash commands — seven personal, seven dev. Plus the **local meta layer** (`.opencode/`) with three meta agents, three meta commands, and two meta skills for maintaining the framework itself.
 
-### Hour 48: Documentation
+### Step 8: Documentation
 
 README with TOC, contributing guidelines, license. Blog post explaining every design decision. Commit history cleaned up into 26 clean, conventional commits.
 
-**5,921 lines. 65 files. 26 commits. One night's work.**
+**5,921 lines. 65 files. 26 commits. About one hour's work (with AI).**
 
 ## The architecture: global vs. local
 
@@ -141,14 +145,12 @@ No shortcuts. No "I'll document it later." Because later never comes.
 
 ## What's next?
 
-This is just the beginning. I've already got plans for:
+I'm far from done. I've already got plans for:
 
 - **More skills** — web scraping, data analysis, API integration
 - **Better memory** — deeper cross-session context using the memory MCP server
 - **Automated maintenance** — my meta agents are already self-healing the config
 
-The ai-config project isn't a product. It's a **platform**. It's the operating system for my AI-powered workflow. And it's only going to get smarter.
+This whole thing lives on GitHub at [github.com/thebatclaudio/ai-config](https://github.com/thebatclaudio/ai-config) — but it's really **for me**. It's my personal AI config, version-controlled so I don't lose it, tweakable whenever I need something new.
 
-Got questions? Want to know how I structured a specific agent or skill? Drop a comment. Or don't. Either way, I'll be here, refining the machine.
-
-Because that's what I do.
+If you find it useful or want to steal ideas for your own setup, go for it. If you want to fork it and make it yours, even better. But the real goal here is **inspiration** — showing what's possible when you treat your AI tooling as a first-class codebase, not an afterthought. Build your own. Make it yours. That's the point.
